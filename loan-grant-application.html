@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThePenMoney App - Loan & Grant Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .eligibility-result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>கடன் மற்றும் மானிய விண்ணப்பம் (Loan & Grant Application)</h1>
+    <div class="form-container">
+        <h2>விண்ணப்ப φόம் (Application Form)</h2>
+        <form id="loanGrantForm">
+            <label for="shgName">சுய உதவி குழுவின் பெயர் (Self Help Group Name):</label>
+            <input type="text" id="shgName" required>
+
+            <label for="locality">உங்கள் வட்டாரம் (Locality):</label>
+            <input type="text" id="locality" required>
+
+            <label for="registrationDetails">பதிவு விவரங்கள் (Registration Details):</label>
+            <input type="text" id="registrationDetails" required>
+
+            <button type="button" onclick="checkEligibility()">உள்ளீட்டுத் தேர்வு (Check Eligibility)</button>
+            <div class="eligibility-result" id="eligibilityResult"></div>
+            
+            <h3>ஆவணங்கள் (Documents)</h3>
+            <label for="aadharCard">ஆதார் அட்டை (Aadhar Card):</label>
+            <input type="file" id="aadharCard" accept="application/pdf,image/*" required>
+
+            <label for="registrationCertificate">சுய உதவி குழுவின் பதிவு சான்றிதழ் (Self Help Group Registration Certificate):</label>
+            <input type="file" id="registrationCertificate" accept="application/pdf,image/*" required>
+
+            <button type="submit">விண்ணப்பிக்கவும் (Apply)</button>
+        </form>
+    </div>
+
+    <script>
+        function checkEligibility() {
+            const shgName = document.getElementById('shgName').value;
+            const locality = document.getElementById('locality').value;
+
+            // Eligibility logic (dummy logic for example)
+            if (shgName && locality) {
+                document.getElementById('eligibilityResult').innerText = 
+                    'உங்கள் குழு கடனுக்கு தகுதியானது! (Your group is eligible for loans!)';
+            } else {
+                document.getElementById('eligibilityResult').innerText = 
+                    'உங்கள் குழு கடனுக்கு தகுதியானது இல்லை. (Your group is not eligible for loans.)';
+            }
+        }
+
+        document.getElementById('loanGrantForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            alert('கடன் அல்லது மானிய விண்ணப்பம் வெற்றிகரமாக முடிந்தது! (Loan or Grant application completed successfully!)');
+            // Here you would typically send the form data to a server
+        });
+    </script>
+</body>
+</html>

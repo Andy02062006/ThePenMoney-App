@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThePenMoney App Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+        }
+        button {
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form id="loginForm">
+        <h2>உள்ளிடவும் (Login)</h2>
+        <label for="aadhar">ஆதார் எண் (Aadhaar Number):</label>
+        <input type="text" id="aadhar" placeholder="ஆதார் எண் உள்ளிடவும்" required>
+        <label for="password">கடவுச்சொல் (Password):</label>
+        <input type="password" id="password" placeholder="கடவுச்சொல் உள்ளிடவும்" required>
+        <button type="submit">உள்ளிடவும் (Login)</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

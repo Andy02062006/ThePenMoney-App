@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThePenMoney App - Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .service-button {
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>எங்கள் சேவைகள் (Our Services)</h1>
+    <p>தயவுசெய்து உங்கள் தேவைக்கு ஏற்ப சேவையை தேர்ந்தெடுக்கவும் (Please select a service according to your need):</p>
+    <button class="service-button" id="financesButton">நிதிச் சேவைகள் (Finances)</button>
+    <button class="service-button" id="jobsButton">வேலை வாய்ப்புகள் (Jobs)</button>
+
+    <script>
+ document.getElementById('financesButton').addEventListener('click', function() {
+    // Redirect to the finances assistance page
+    window.location.href = 'finances.html';
+});
+
+
+document.getElementById('jobsButton').addEventListener('click', function() {
+    // Redirect to the job opportunities page
+    window.location.href = 'jobs.html';
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThePenMoney App - Job Opportunities</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            margin: 0;
+            padding: 20px;
+        }
+        .info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .feature-button {
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            background: #e2e2e2;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>வேலை வாய்ப்பு சேவைகள் (Employement Services)</h1>
+    <div class="info">
+        <p>நீங்கள் வேலை வாய்ப்புகளை தேடுகிறீர்களா? கீழே உள்ளவைகளில் ஒன்றைத் தேர்ந்தெடுக்கவும் (Are you looking for job opportunities? Please choose one of the options below):</p>
+    </div>
+
+    <ul>
+        <li>
+            <button class="feature-button" id="registrationJobsButton">பதிவு மற்றும் சரிபார்ப்பு (Registration & Verification)</button>
+        </li>
+        <li>
+            <button class="feature-button" id="jobListingsButton">வேலை பட்டியல்கள் & வாய்ப்புகள் (Job Listings & Opportunities)</button>
+        </li>
+        <li>
+            <button class="feature-button" id="skillMappingButton">திறன்கள் வரைபடம் & பொருத்தம் (Skill Mapping & Matching)</button>
+        </li>
+        <li>
+            <button class="feature-button" id="trainingJobsButton">பயிற்சி & திறன் மேம்பாடு (Training & Skill Development)</button>
+        </li>
+        <li>
+            <button class="feature-button" id="entrepreneurshipButton">தொழில்முனைவோர் & வணிக ஆதரவு (Entrepreneurship & Business Support)</button>
+        </li>
+       
+    </ul>
+
+    <script>
+        document.getElementById('registrationJobsButton').addEventListener('click', function() {
+    // Redirect to the registration page
+    window.location.href = 'financeregistration.html';
+        });
+
+        document.getElementById('jobListingsButton').addEventListener('click', function() {
+    // Redirect to the job-listings-opportunities page
+    window.location.href = 'job-listings-opportunities.html';
+        });
+
+        document.getElementById('skillMappingButton').addEventListener('click', function() {
+;    // Redirect to the skill-mapping-matching page
+    window.location.href = 'skill-matching-mapping.html'
+        });
+
+        document.getElementById('trainingJobsButton').addEventListener('click', function() {
+            // Redirect to the training-skill-development page
+       window.location.href = 'training-skill-development.html'
+        });
+
+        document.getElementById('entrepreneurshipButton').addEventListener('click', function() {
+               // Redirect to the entrepreneurship-business-support page
+       window.location.href = 'entrepreneurship-business-support.html'
+        });
+
+
+
+
+    </script>
+</body>
+</html>

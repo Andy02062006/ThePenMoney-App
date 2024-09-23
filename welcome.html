@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThePenMoney App - Welcome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        button {
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>பயன்பாட்டிற்கு வரவேற்கிறோம்! (Welcome to the app!)</h1>
+    <p>
+        இன்று உங்களுக்கு உதவுவதில் நாங்கள் மகிழ்ச்சியடைகிறோம்! (We are glad to assist you today!).</p>
+    <button id="continueButton">தொடரவும் (Continue)</button>
+
+    <script>
+document.getElementById('continueButton').addEventListener('click', function() {
+    // Redirect to the services page
+    window.location.href = 'services.html';
+
+
+        });
+    </script>
+</body>
+</html>

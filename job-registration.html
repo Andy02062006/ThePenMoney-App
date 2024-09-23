@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThePenMoney App - Job Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .success-message, .error-message {
+            color: #5cb85c;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .error-message {
+            color: #d9534f;
+        }
+    </style>
+</head>
+<body>
+    <h1>வேலை வாய்ப்பு பதிவு மற்றும் சான்றிதல் (Job Registration & Verification)</h1>
+    
+    <div class="form-container">
+        <form id="jobRegistrationForm">
+            <label for="name">பெயர் (Name):</label>
+            <input type="text" id="name" required>
+
+            <label for="place">இடம் (Place):</label>
+            <input type="text" id="place" required>
+
+            <label for="qualification">கல்வி (Qualification):</label>
+            <input type="text" id="qualification" required>
+
+            <label for="contact">தொடர்பு எண் (Contact Number):</label>
+            <input type="tel" id="contact" required>
+
+            <label for="aadhar">ஆதார் எண் (Aadhar Number):</label>
+            <input type="text" id="aadhar" required>
+
+            <label for="shgName">சுய உதவி குழுவின் பெயர் (Self Help Group Name):</label>
+            <input type="text" id="shgName" required>
+
+            <label for="password">கடவுச்சொல் (Password):</label>
+            <input type="password" id="password" required>
+
+            <button type="button" id="sendOtpButton">OTP அனுப்பவும் (Send OTP)</button>
+            <div class="success-message" id="otpMessage" style="display:none;">OTP அனுப்பப்பட்டது! (OTP sent!)</div>
+
+            <label for="otp">OTP உள்ளிடவும்:</label>
+            <input type="text" id="otp" required>
+            <button type="submit">பதிவுசெய்யவும் (Register)</button>
+            <div class="success-message" id="successMessage" style="display:none;"></div>
+            <div class="error-message" id="errorMessage" style="display:none;"></div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('sendOtpButton').addEventListener('click', function() {
+            const contact = document.getElementById('contact').value;
+
+            // Here you would typically send the OTP to the user's contact number
+            alert('OTP has been sent to ' + contact);
+            document.getElementById('otpMessage').style.display = 'block';
+        });
+
+        document.getElementById('jobRegistrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            const otpEntered = document.getElementById('otp').value;
+            // Here you would typically validate the OTP entered with the sent OTP
+            const isOtpValid = true; // Simulating OTP validation, replace with actual validation
+
+            if (isOtpValid) {
+                // Here you would typically send the registration data to a server
+                document.getElementById('successMessage').innerText = 
+                    'பதிவு வெற்றிகரமாக முடிந்தது! (Registration successful!)';
+                document.getElementById('successMessage').style.display = 'block';
+                document.getElementById('errorMessage').style.display = 'none';
+            } else {
+                document.getElementById('errorMessage').innerText = 
+                    'தவறான OTP! (Invalid OTP!)';
+                document.getElementById('errorMessage').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

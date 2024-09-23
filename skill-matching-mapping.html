@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>திறன் பொருத்தம் மற்றும் வரைபடம் (Skill Matching and Mapping)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>திறன் பொருத்தம் மற்றும் வரைபடம் (Skill Matching and Mapping)</h1>
+
+        <section class="skill-input">
+            <h2>உங்கள் திறன்களை உள்ளிடவும் (Enter Your Skills)</h2>
+            <input type="text" id="skillsInput" placeholder="உதாரணம்: கையெழுத்து, கணினி, சமையல் (e.g., Craft, Computer, Cooking)">
+            <button onclick="findMatches()">வேலை பொருத்தங்களை தேடு (Find Matches)</button>
+        </section>
+
+        <section id="matches" class="matches">
+            <h2>பொருத்தமான வேலைகள் (Matched Jobs)</h2>
+            <ul id="matchesList">
+                <!-- பொருத்தமான வேலைகள் இங்கே காட்டு (Matched jobs will be displayed here) -->
+            </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

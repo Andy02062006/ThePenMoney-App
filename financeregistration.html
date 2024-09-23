@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThePenMoney App - Registration & Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .required {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>பதிவு மற்றும் சரிபார்ப்பு (Registration & Verification)</h1>
+    <form id="registrationForm">
+        <label for="name">பெயர் <span class="required">*</span></label>
+        <input type="text" id="name" required>
+        
+        <label for="place">இடம் <span class="required">*</span></label>
+        <input type="text" id="place" required>
+        
+        <label for="qualification">கல்வி <span class="required">*</span></label>
+        <input type="text" id="qualification" required>
+        
+        <label for="contact">தொடர்பு எண் <span class="required">*</span></label>
+        <input type="tel" id="contact" required>
+        
+        <label for="aadhar">ஆதார் எண் <span class="required">*</span></label>
+        <input type="text" id="aadhar" required>
+        
+        <label for="shg">சுய உதவிக் குழுவின் பெயர் <span class="required">*</span></label>
+        <input type="text" id="shg" required>
+        
+        <label for="password">கடவுச்சொல் <span class="required">*</span></label>
+        <input type="password" id="password" required>
+        
+        <button type="submit">பதிவு செய்யவும் (Register)</button>
+    </form>
+    <div id="otpSection">
+        <h3>OTP பதிவு செய்க (Enter OTP)</h3>
+        <input type="text" id="otpInput" placeholder="Enter OTP" required>
+        <button id="verifyOtpButton">சரிபார்க்கவும் (Verify OTP)</button>
+    </div>
+
+    <div id="successMessage" style="display: none; margin-top: 20px; color: green;">
+        பதிவு வெற்றிகரமாக நடைபெற்றது! (Registration Successful!)
+    </div>
+
+    <script>
+        let generatedOtp;
+
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Generate a random OTP
+            generatedOtp = Math.floor(100000 + Math.random() * 900000); // 6-digit OTP
+            console.log("Generated OTP (for testing purposes):", generatedOtp); // For debugging; in real scenarios, send via SMS/email
+            
+            // Show OTP input section
+            document.getElementById('otpSection').style.display = 'block';
+
+            // Optionally, simulate sending OTP here (e.g., via an SMS API)
+        });
+
+        document.getElementById('verifyOtpButton').addEventListener('click', function() {
+            const enteredOtp = document.getElementById('otpInput').value;
+
+            if (enteredOtp == generatedOtp) {
+                // Show the success message
+                document.getElementById('successMessage').style.display = 'block';
+                // Clear the form and OTP input
+                document.getElementById('registrationForm').reset();
+                document.getElementById('otpInput').value = '';
+                document.getElementById('otpSection').style.display = 'none';
+            } else {
+                alert('சரியான OTP இல்லை! (Invalid OTP)');
+            }
+        });
+    </script>
+</body>
+</html>

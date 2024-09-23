@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>வேலைப் பதிவுகள் மற்றும் வாய்ப்புகள் (Job Listings and Opportunities)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>வேலைப் பதிவுகள் மற்றும் வாய்ப்புகள் (Job Listings and Opportunities)</h1>
+
+        <section class="filters">
+            <h2>முடிவுகள் (Filters)</h2>
+            <label for="area">பகுதி (Area):</label>
+            <input type="text" id="area">
+
+            <label for="qualification">தகுதி (Qualification):</label>
+            <input type="text" id="qualification">
+
+            <label for="ageGroup">வயது குழு (Age Group):</label>
+            <input type="text" id="ageGroup">
+
+            <label for="jobType">வேலை வகை (Job Type):</label>
+            <input type="text" id="jobType">
+
+            <button onclick="filterJobs()">வேலைகளை தேடு (Search Jobs)</button>
+        </section>
+
+        <section id="jobListings" class="job-listings">
+            <h2>வேலை வாய்ப்புகள் (Job Opportunities)</h2>
+            <ul id="list">
+                <!-- வேலைகள் இங்கே காட்டு (Jobs will be displayed here) -->
+            </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

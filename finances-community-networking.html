@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThePenMoney App - Community & Networking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .success-message {
+            color: #5cb85c;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .social-media {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>சமூகம் மற்றும் நெட்வொர்கிங் (Community & Networking)</h1>
+    
+    <div class="form-container">
+        <h2>உங்கள் சுய உதவி குழுவில் இணையவும் (Join Your Self Help Group)</h2>
+        <form id="joinSHGForm">
+            <label for="shgName">சுய உதவி குழுவின் பெயர் (Self Help Group Name):</label>
+            <input type="text" id="shgName" required>
+
+            <label for="region">உங்கள் கிராமத்தை தேர்ந்தெடுக்கவும் (Select Your Rural Community):</label>
+            <select id="region" required>
+                <option value="">--Select Community--</option>
+                <option value="madurai">மதுரை (Madurai)</option>
+                <option value="theni">தெனியில் (Theni)</option>
+                <option value="tuticorin">தூத்துக்குடி (Tuticorin)</option>
+                <option value="dindigul">திண்டுக்கல் (Dindigul)</option>
+                <option value="tirunelveli">திருநெல்வேலி (Tirunelveli)</option>
+                <option value="virudhunagar">விருதுநகர் (Virudhunagar)</option>
+                <option value="ramanathapuram">ராமநாதபுரம் (Ramanathapuram)</option>
+                <option value="kanyakumari">கன்னியாகுமரி (Kanyakumari)</option>
+            </select>
+
+            <button type="submit">சேர் (Join)</button>
+            <div class="success-message" id="successMessage" style="display:none;"></div>
+        </form>
+    </div>
+
+    <div class="social-media">
+        <h2>சமூக ஊடகம் (Social Media)</h2>
+        <p>உங்கள் சாதனைகளைப் பகிரவும்!</p>
+        <ul>
+            <li><a href="https://www.facebook.com/yourapp" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/yourapp" target="_blank">Instagram</a></li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('joinSHGForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            const shgName = document.getElementById('shgName').value;
+            const region = document.getElementById('region').value;
+
+            // Here you would typically send the data to a server for processing
+
+            // Show success message
+            document.getElementById('successMessage').innerText = 
+                'நீங்கள் உங்கள் சுய உதவி குழுவின் ஆன்லைன் சமூகம் உருவாக்கியுள்ளார்! (You have successfully joined your self help group\'s online community.)';
+            document.getElementById('successMessage').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

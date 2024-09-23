@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThePenMoney App - Financial Assistance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            margin: 0;
+            padding: 20px;
+        }
+        .info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .option-button {
+            padding: 15px 30px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            background: #e2e2e2;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>நிதிச் சேவைகள் (Financial Assistance)</h1>
+    <div class="info">
+        <p>நீங்கள் நிதி சேவைகளை தேடுகிறீர்களா? கீழே உள்ளவைகளில் ஒன்றைத் தேர்ந்தெடுக்கவும் (Are you looking for financial assistance? Please choose one of the options below):</p>
+    </div>
+
+    <ul>
+        <li>
+            <button class="option-button" id="registrationButton">பதிவு மற்றும் அங்கீகாரம் (Registration & Verification)</button>
+        </li>
+        <li>
+            <button class="option-button" id="schemesButton">அரசு திட்டங்கள் பற்றிய தகவல்கள் (Information on Government Schemes)</button>
+        </li>
+        <li>
+            <button class="option-button" id="loanButton">கடன் & உதவித் திரட்டல் (Loan & Grant Application Management)</button>
+        </li>
+        <li>
+            <button class="option-button" id="trainingButton"> பயிற்சி & ஆதரவு வளங்கள் (Training & Support Resources)</button>
+        </li>
+        <li>
+            <button class="option-button" id="communityButton">குழு & இணைப்பு (Community & Networking)</button>
+        </li>
+    </ul>
+
+    <script>
+        document.getElementById('registrationButton').addEventListener('click', function() {
+    // Redirect to the registration page
+    window.location.href = 'financeregistration.html';
+});
+
+
+document.getElementById('schemesButton').addEventListener('click', function() {
+    // Redirect to the government schemes page
+    window.location.href = 'financeschemes.html';
+});
+
+
+        document.getElementById('loanButton').addEventListener('click', function() {
+           // Redirect to the loan-grant-application page
+    window.location.href = 'loan-grant-application.html';
+        });
+
+        document.getElementById('trainingButton').addEventListener('click', function() {
+                    // Redirect to the finances-training-support page
+    window.location.href = 'finances-training-support.html';
+        });
+
+        document.getElementById('communityButton').addEventListener('click', function() {
+                         // Redirect to the finances-community-networking page
+    window.location.href = 'finances-community-networking.html';
+        });
+    </script>
+</body>
+</html>

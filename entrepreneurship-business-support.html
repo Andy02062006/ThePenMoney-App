@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>சுய தொழில் மற்றும் வணிக ஆதரவு (Entrepreneurship and Business Support)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>சுய தொழில் மற்றும் வணிக ஆதரவு (Entrepreneurship and Business Support)</h1>
+
+        <section class="benefits">
+            <h2>இந்த செயலியின் நன்மைகள் (Benefits of This App)</h2>
+            <ul>
+                <li>💼 சுய தொழிலுக்கான பாடங்கள் (Courses for Entrepreneurship)</li>
+                <li>📜 சான்றிதழ் பாடங்கள் (Certificate Courses)</li>
+                <li>🤝 வணிக ஆலோசனைகள் (Business Advice)</li>
+                <li>📈 சந்தை ஆய்வு (Market Research)</li>
+                <li>💡 நிதி உதவிகள் (Financial Assistance)</li>
+            </ul>
+        </section>
+
+        <section class="application-form">
+            <h2>வணிகத்திற்கு விண்ணப்பம் (Apply for Business Ownership)</h2>
+            <form id="businessApplicationForm" onsubmit="submitApplication(event)">
+                <label for="name">பெயர் (Name):</label>
+                <input type="text" id="name" required>
+
+                <label for="locality">இருப்பிடம் (Locality):</label>
+                <input type="text" id="locality" required>
+
+                <label for="shgName">சுய உதவிக்குழு பெயர் (Self Help Group Name):</label>
+                <input type="text" id="shgName" required>
+
+                <label for="aadhar">ஆதார் எண் (Aadhar Number):</label>
+                <input type="text" id="aadhar" required>
+
+                <label for="qualification">தகுதி (Qualification):</label>
+                <input type="text" id="qualification" required>
+
+                <button type="submit">விண்ணப்பிக்கவும் (Apply)</button>
+            </form>
+            <p id="confirmationMessage" style="display:none; color: green;"></p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
